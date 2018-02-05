@@ -8,29 +8,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-import com.dao.CategoryDao;
-import com.model.Category;
+import com.dao.ProductDao;
+import com.model.Product;
 
 @Repository
 @Service
-public class CategoryDaoImpl implements CategoryDao {
+public class ProductDaoImpl implements ProductDao{
 	@Autowired
 	SessionFactory sessionFactory;
 	@Autowired
-    public CategoryDaoImpl(SessionFactory sessionFactory) {
+    public ProductDaoImpl(SessionFactory sessionFactory) {
 	this.sessionFactory=sessionFactory;
     }
 	@Transactional
-	public void insertCategory(Category category) {
+	public void insertProduct(Product product) {
 		Session session=sessionFactory.openSession();
 		session.beginTransaction();
 		//session.presist();
-		session.saveOrUpdate(category);
+		session.saveOrUpdate(product);
 		session.getTransaction().commit();
 		
 	}
-	
-	public void getCatByID(String cid) {
-		//add today
-	}
+
 }
