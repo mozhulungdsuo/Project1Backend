@@ -5,9 +5,7 @@
   <groupId>com</groupId>
   <artifactId>astorebackend</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
-  <name>astorebackend</name>
+    <name>astorebackend</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -45,19 +43,43 @@
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-orm</artifactId>
-    <version>4.3.12.RELEASE</version>
+    <version>4.3.13.RELEASE</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-context</artifactId>
-    <version>4.3.12.RELEASE</version>
+    <version>4.3.13.RELEASE</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-web</artifactId>
-    <version>4.3.12.RELEASE</version>
+    <version>4.3.13.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-tx</artifactId>
+    <version>4.2.6.RELEASE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>4.3.13.RELEASE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <version>1.4.196</version>
+   <!-- <scope>test</scope>-->
+</dependency>
+<dependency>
+    <groupId>javax.servlet.jsp.jstl</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+   
 </dependency>
 
   </dependencies>

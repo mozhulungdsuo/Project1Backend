@@ -29,5 +29,14 @@ public class ProductDaoImpl implements ProductDao{
 		session.getTransaction().commit();
 		
 	}
+	@Transactional
+	public
+	void deleteProduct(Product product) {
+		Session session=sessionFactory.openSession();
+		session.beginTransaction();
+		//session.presist();
+		session.delete(product);
+		session.getTransaction().commit();
+	}
 
 }

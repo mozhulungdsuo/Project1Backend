@@ -23,15 +23,5 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/MOZHUI/.m2/repository/org/springframework/spring-tx/3.2.9.RELEASE/spring-tx-3.2.9.RELEASE.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="org.eclipse.jst.component.archivename" value="spring-tx-3.2.9.RELEASE.jar"/>
-			<attribute name="maven.groupId" value="org.springframework"/>
-			<attribute name="maven.artifactId" value="spring-tx"/>
-			<attribute name="maven.version" value="3.2.9.RELEASE"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

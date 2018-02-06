@@ -29,4 +29,12 @@ public class SupplierDaoImpl implements SupplierDao {
 		session.getTransaction().commit();
 		
 	}
+	public void deleteSupplier(Supplier supplier) {
+		Session session=sessionFactory.openSession();
+		session.beginTransaction();
+		//session.presist();
+		session.delete(supplier);
+		session.getTransaction().commit();
+		
+	}
 }

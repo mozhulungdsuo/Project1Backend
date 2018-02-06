@@ -5,11 +5,15 @@ import javax.transaction.Transactional;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-import com.model.Supplier;
+import com.dao.UserDao;
+
 import com.model.User;
-
-public class UserDaoImpl {
+@Repository
+@Service
+public class UserDaoImpl implements UserDao {
 	@Autowired
 	SessionFactory sessionFactory;
 	@Autowired
@@ -21,8 +25,16 @@ public class UserDaoImpl {
 		Session session=sessionFactory.openSession();
 		session.beginTransaction();
 		//session.presist();
-		session.saveOrUpdate(user);
+		session.save(user);
 		session.getTransaction().commit();
 		
 	}
+	@Transactional
+	public void deleteUser(User user) {
+		Session session=sessionFactory.openSession();
+		session.beginTransaction();
+		session.delete(user);
+		session.getTransaction().commit();
+	}
+	
 }

@@ -33,4 +33,11 @@ public class CategoryDaoImpl implements CategoryDao {
 	public void getCatByID(String cid) {
 		//add today
 	}
+	public void deleteCategory(Category category) {
+		Session session=sessionFactory.openSession();
+		session.beginTransaction();
+		//session.presist();
+		session.delete(category);
+		session.getTransaction().commit();
+	}
 }

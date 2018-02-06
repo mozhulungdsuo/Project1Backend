@@ -24,19 +24,19 @@ import com.model.User;
 public class HibernateConfig {
     @Autowired
     @Bean(name="datasource")
-    public DataSource getH2Data()
+    public  DataSource getH2Data()
     {
     	System.out.println("hibernate bean init");
     	DriverManagerDataSource dsource=new DriverManagerDataSource();
     	dsource.setDriverClassName("org.h2.Driver");
-    	dsource.setUrl("");
-    	dsource.setUsername("");
+    	dsource.setUrl("jdbc:h2:~/new");
+    	dsource.setUsername("sa");
     	dsource.setPassword("");
     	System.out.println("H2 connected");
     	return dsource;
 
     }
-    private Properties gethiberProp()
+    private  Properties gethiberProp()
     {
     	Properties p=new Properties();
     	p.put("hibernate.dailect","org.hibernate.dailect.H2Dailect");
@@ -51,7 +51,7 @@ public class HibernateConfig {
 
 	@Autowired
 	@Bean(name="sessionFactory")
-	public SessionFactory getSessionFac(DataSource datasource) {
+	public   SessionFactory getSessionFac(DataSource datasource) {
 		LocalSessionFactoryBuilder sb=new LocalSessionFactoryBuilder(datasource);
 		sb.addProperties(gethiberProp());
 		sb.addAnnotatedClass(User.class);
