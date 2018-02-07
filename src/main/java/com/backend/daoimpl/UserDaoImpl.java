@@ -23,6 +23,7 @@ public class UserDaoImpl implements UserDao {
     }
 	@Transactional
 	public void insertUser(User user) {
+	
 		Session session=sessionFactory.openSession();
 		session.beginTransaction();
 		//session.presist();

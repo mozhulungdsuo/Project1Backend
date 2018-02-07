@@ -30,8 +30,7 @@ public class ProductDaoImpl implements ProductDao{
 		
 	}
 	@Transactional
-	public
-	void deleteProduct(Product product) {
+	public	void deleteProduct(Product product) {
 		Session session=sessionFactory.openSession();
 		session.beginTransaction();
 		//session.presist();

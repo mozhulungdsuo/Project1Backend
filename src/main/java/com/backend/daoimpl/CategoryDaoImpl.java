@@ -30,9 +30,10 @@ public class CategoryDaoImpl implements CategoryDao {
 		
 	}
 	
-	public void getCatByID(String cid) {
+	//public void getCatByID(String cid) {
 		//add today
-	}
+	//}
+	@Transactional
 	public void deleteCategory(Category category) {
 		Session session=sessionFactory.openSession();
 		session.beginTransaction();

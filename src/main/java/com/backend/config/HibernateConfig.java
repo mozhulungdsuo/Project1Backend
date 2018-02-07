@@ -19,7 +19,7 @@ import com.backend.daoimpl.SupplierDaoImpl;
 import com.backend.daoimpl.UserDaoImpl;
 import com.backend.model.User;
 @Configuration
-@ComponentScan("com")
+@ComponentScan("com.backend")
 @EnableTransactionManagement
 public class HibernateConfig {
     @Autowired
@@ -28,6 +28,7 @@ public class HibernateConfig {
     {
     	System.out.println("hibernate bean init");
     	DriverManagerDataSource dsource=new DriverManagerDataSource();
+    	System.out.println("here");
     	dsource.setDriverClassName("org.h2.Driver");
     	dsource.setUrl("jdbc:h2:~/new");
     	dsource.setUsername("sa");
@@ -58,18 +59,20 @@ public class HibernateConfig {
 		return sb.buildSessionFactory();
 	}
 	
-	@Autowired
+	/*@Autowired
 	@Bean(name="supplierDaoImpl")
 	public SupplierDaoImpl getSuppData(SessionFactory sf)
 	{
 		return new SupplierDaoImpl(sf);
 	}
-	@Autowired
+	*/
+	/*@Autowired
 	@Bean(name="categoryDaoImpl")
 	public CategoryDaoImpl getcategoryData(SessionFactory sf)
 	{
 		return new CategoryDaoImpl(sf);
 	}
+	*/
 	@Autowired
 	@Bean(name="userDaoImpl")
 	public UserDaoImpl getuserData(SessionFactory sf)

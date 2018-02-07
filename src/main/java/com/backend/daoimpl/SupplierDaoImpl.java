@@ -29,6 +29,7 @@ public class SupplierDaoImpl implements SupplierDao {
 		session.getTransaction().commit();
 		
 	}
+	@Transactional
 	public void deleteSupplier(Supplier supplier) {
 		Session session=sessionFactory.openSession();
 		session.beginTransaction();
