@@ -18,11 +18,13 @@ import com.backend.daoimpl.CategoryDaoImpl;
 import com.backend.daoimpl.SupplierDaoImpl;
 import com.backend.daoimpl.UserDaoImpl;
 import com.backend.model.User;
+
 @Configuration
-@ComponentScan("com.backend")
 @EnableTransactionManagement
 public class HibernateConfig {
-    @Autowired
+	@Autowired
+	UserDaoImpl userDaoImpl;
+    //@Autowired
     @Bean(name="datasource")
     public  DataSource getH2Data()
     {
@@ -50,7 +52,7 @@ public class HibernateConfig {
     }
 	
 
-	@Autowired
+	//@Autowired
 	@Bean(name="sessionFactory")
 	public   SessionFactory getSessionFac(DataSource datasource) {
 		LocalSessionFactoryBuilder sb=new LocalSessionFactoryBuilder(datasource);
@@ -59,27 +61,27 @@ public class HibernateConfig {
 		return sb.buildSessionFactory();
 	}
 	
-	/*@Autowired
-	@Bean(name="supplierDaoImpl")
+	//@Autowired
+	@Bean(name="supplierdaoimpl")
 	public SupplierDaoImpl getSuppData(SessionFactory sf)
 	{
 		return new SupplierDaoImpl(sf);
 	}
-	*/
-	/*@Autowired
-	@Bean(name="categoryDaoImpl")
+	
+	//@Autowired
+	@Bean(name="categorydaoimpl")
 	public CategoryDaoImpl getcategoryData(SessionFactory sf)
 	{
 		return new CategoryDaoImpl(sf);
 	}
-	*/
-	@Autowired
+	
+	//@Autowired
 	@Bean(name="userDaoImpl")
 	public UserDaoImpl getuserData(SessionFactory sf)
 	{
 		return new UserDaoImpl(sf);
 	}
-	@Autowired
+	//@Autowired
 	@Bean(name="transactionManager")
 	public HibernateTransactionManager gettrans(SessionFactory sf)
 	{

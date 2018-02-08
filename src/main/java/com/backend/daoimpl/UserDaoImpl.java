@@ -17,6 +17,8 @@ import com.backend.model.User;
 public class UserDaoImpl implements UserDao {
 	@Autowired
 	SessionFactory sessionFactory;
+
+	UserDaoImpl userDaoImpl;
 	@Autowired
     public UserDaoImpl(SessionFactory sessionFactory) {
 	this.sessionFactory=sessionFactory;

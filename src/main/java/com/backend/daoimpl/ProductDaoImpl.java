@@ -17,6 +17,8 @@ public class ProductDaoImpl implements ProductDao{
 	@Autowired
 	SessionFactory sessionFactory;
 	@Autowired
+	ProductDao productdao;
+	@Autowired
     public ProductDaoImpl(SessionFactory sessionFactory) {
 	this.sessionFactory=sessionFactory;
     }

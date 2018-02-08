@@ -17,6 +17,8 @@ public class CategoryDaoImpl implements CategoryDao {
 	@Autowired
 	SessionFactory sessionFactory;
 	@Autowired
+	CategoryDao categorydao;
+	@Autowired
     public CategoryDaoImpl(SessionFactory sessionFactory) {
 	this.sessionFactory=sessionFactory;
     }

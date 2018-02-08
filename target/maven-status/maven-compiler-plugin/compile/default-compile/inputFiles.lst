@@ -1,0 +1,13 @@
+D:\SPRING\astorebackend\src\main\java\com\backend\dao\SupplierDao.java
+D:\SPRING\astorebackend\src\main\java\com\backend\config\HibernateConfig.java
+D:\SPRING\astorebackend\src\main\java\com\backend\dao\CategoryDao.java
+D:\SPRING\astorebackend\src\main\java\com\backend\model\Product.java
+D:\SPRING\astorebackend\src\main\java\com\backend\model\Category.java
+D:\SPRING\astorebackend\src\main\java\com\backend\model\Supplier.java
+D:\SPRING\astorebackend\src\main\java\com\backend\daoimpl\SupplierDaoImpl.java
+D:\SPRING\astorebackend\src\main\java\com\backend\daoimpl\UserDaoImpl.java
+D:\SPRING\astorebackend\src\main\java\com\backend\dao\ProductDao.java
+D:\SPRING\astorebackend\src\main\java\com\backend\model\User.java
+D:\SPRING\astorebackend\src\main\java\com\backend\dao\UserDao.java
+D:\SPRING\astorebackend\src\main\java\com\backend\daoimpl\ProductDaoImpl.java
+D:\SPRING\astorebackend\src\main\java\com\backend\daoimpl\CategoryDaoImpl.java

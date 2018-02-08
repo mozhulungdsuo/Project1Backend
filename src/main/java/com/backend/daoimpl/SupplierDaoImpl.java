@@ -16,6 +16,8 @@ import com.backend.model.Supplier;
 public class SupplierDaoImpl implements SupplierDao {
 	@Autowired
 	SessionFactory sessionFactory;
+	//@Autowired 
+	//SupplierDao supplierdao;
 	@Autowired
     public SupplierDaoImpl(SessionFactory sessionFactory) {
 	this.sessionFactory=sessionFactory;
